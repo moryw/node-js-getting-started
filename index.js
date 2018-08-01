@@ -9,6 +9,8 @@ const pool = new Pool({
   ssl: true
 });
 
+const app = express();
+
 app.get('/db', async (req, res) => {
   try {
     const client = await pool.connect()
